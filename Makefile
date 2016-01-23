@@ -6,23 +6,36 @@
 #    By: aliandie <aliandie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/26 13:38:59 by aliandie          #+#    #+#              #
-#    Updated: 2015/04/17 16:36:05 by aliandie         ###   ########.fr        #
+#    Updated: 2016/01/19 10:19:51 by aliandie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 21sh
+NAME = ft_minishell1
 CCLIB = -Llibft -lft
-CCFLAGS = -Wall -Werror -Wextra -g
+CCFLAGS = -g -Wall -Werror -Wextra
 SRCDIR = src
 OBJDIR = obj
 INCDIR = includes libft/includes
 
-# SRC += 	main.c
-# SRC	+=	env_init.c
- SRC +=	arg_init.c
-# SRC +=	ft_cd.c
-# SRC +=	find_arg_p.c
-SRC += parser.c
+SRC = 	main.c\
+		find_arg.c\
+		ft_findbuiltin.c\
+		ft_cd.c\
+		ft_env.c\
+		ft_exe.c\
+		ft_builtin.c\
+		ft_paramlen.c\
+		ft_puttab.c\
+		ft_tablen.c\
+		ft_setenv.c\
+		ft_setenvvoid.c\
+		ft_tabreallocless.c\
+		ft_tabreallocmore.c\
+		ft_unsetenv.c\
+		get_arg.c\
+		get_param.c\
+		get_path.c\
+		set_newenv.c\
 
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
